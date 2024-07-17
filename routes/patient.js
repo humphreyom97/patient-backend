@@ -42,12 +42,24 @@ router.post("/", async (req, res) => {
 });
 
 // delete the patient from the database
-router.delete("/:id", (req, res) => {
-  const { id } = req.params;
+router.delete("/:id", async (req, res) => {
+  try {
+    const { id } = req.params;
 
-  patients = patients.filter((patient) => patient.id !== id);
+    const deletedPatient = await Patient.findByIdAndDelete(id);
 
-  res.send(`${id} deleted successfully from database`);
+    if (!deletedPatient) {
+      return res.status(404).json({ error: "Patient not found" });
+    }
+
+    // Return a JSON response with status 200
+    res
+      .status(200)
+      .json({ message: `${id} deleted successfully from database` });
+  } catch (err) {
+    console.error("Error Deleting patient:", err);
+    res.status(500).json({ error: "Server error" });
+  }
 });
 
 // Update a patient record
