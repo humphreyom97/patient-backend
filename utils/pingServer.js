@@ -3,7 +3,7 @@ import cron from "node-cron";
 
 function keepServerAlive() {
   const baseUrl = process.env.API_BASE_URL;
-  const url = `${baseUrl}/ping`;
+  const url = `${baseUrl}/api/ping`;
   axios
     .get(url)
     .then((response) => {
