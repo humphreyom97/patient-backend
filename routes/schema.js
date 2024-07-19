@@ -26,7 +26,7 @@ const getSchemaMetadata = (schemaPaths) => {
 };
 
 // Retrieve schema metadata for patients
-router.get("/patients", async (req, res) => {
+router.get("/schema/patients", async (req, res) => {
   try {
     const schemaPaths = Patient.schema.paths;
     const validationMetadata = getSchemaMetadata(schemaPaths);

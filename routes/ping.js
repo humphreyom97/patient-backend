@@ -3,7 +3,7 @@ import { Router } from "express";
 const router = Router();
 
 // Ping route
-router.get("/", (req, res) => {
+router.get("/ping", (req, res) => {
   res.send("pong");
 });
 

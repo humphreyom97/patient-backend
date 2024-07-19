@@ -5,18 +5,17 @@ import initialPatients from "../data/patientData.js";
 const router = Router();
 
 // get all patients
-router.get("/", async (req, res) => {
+router.get("/patients", async (req, res) => {
   try {
     const patients = await Patient.find();
     res.json(patients);
   } catch (err) {
-    console.error("Error retrieving patients:", err);
     res.status(500).json({ error: "Server error" });
   }
 });
 
 // get a patient by ID
-router.get("/:id", async (req, res) => {
+router.get("/patients/:id", async (req, res) => {
   try {
     const patient = await Patient.findById(req.params.id);
     if (!patient) {
@@ -24,25 +23,23 @@ router.get("/:id", async (req, res) => {
     }
     res.json(patient);
   } catch (err) {
-    console.error("Error retrieving patient:", err);
     res.status(500).json({ error: "Server error" });
   }
 });
 
 // add a new patient
-router.post("/", async (req, res) => {
+router.post("/patients", async (req, res) => {
   try {
     const newPatient = new Patient(req.body);
     const savedPatient = await newPatient.save();
     res.status(201).json(savedPatient);
   } catch (err) {
-    console.error("Error adding patient:", err);
     res.status(500).json({ error: "Server error" });
   }
 });
 
 // delete the patient from the database
-router.delete("/:id", async (req, res) => {
+router.delete("/patients/:id", async (req, res) => {
   try {
     const { id } = req.params;
 
@@ -57,18 +54,18 @@ router.delete("/:id", async (req, res) => {
       .status(200)
       .json({ message: `${id} deleted successfully from database` });
   } catch (err) {
-    console.error("Error Deleting patient:", err);
     res.status(500).json({ error: "Server error" });
   }
 });
 
 // Update a patient record
-router.put("/:id", async (req, res) => {
+router.put("/patients/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const updates = req.body;
 
     const patient = await Patient.findByIdAndUpdate(id, updates, { new: true });
+
     if (!patient) {
       return res.status(404).send({ message: "Patient not found" });
     }
@@ -80,7 +77,7 @@ router.put("/:id", async (req, res) => {
 });
 
 // Partial update of a patient record
-router.patch("/:id", async (req, res) => {
+router.patch("/patients/:id", async (req, res) => {
   try {
     const { id } = req.params;
     const updates = req.body;
@@ -96,8 +93,8 @@ router.patch("/:id", async (req, res) => {
   }
 });
 
-// Reset database and load new data
-router.post("/resetPatients", async (req, res) => {
+// Reset patient database
+router.post("/patients/resetPatients", async (req, res) => {
   try {
     // Clear the existing database
     await Patient.deleteMany({});
@@ -105,7 +102,9 @@ router.post("/resetPatients", async (req, res) => {
     // Load initial data
     await Patient.insertMany(initialPatients);
 
-    res.status(201).send({ message: "Database reset and initial data loaded" });
+    res
+      .status(201)
+      .send({ message: "Patient Database reset and initial data loaded" });
   } catch (error) {
     res.status(400).send({ error: error.message });
   }

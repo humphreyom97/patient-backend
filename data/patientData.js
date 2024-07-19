@@ -3,7 +3,7 @@ const initialData = [
     personalInfo: {
       firstName: "John",
       lastName: "Doe",
-      dob: "1990-01-01",
+      dob: "1990-01-01T00:00:00.000Z",
       gender: "male",
       contactInfo: {
         email: "john.doe@example.com",
@@ -14,12 +14,12 @@ const initialData = [
     medicalHistory: [
       {
         condition: "Diabetes",
-        diagnosisDate: "2010-05-15",
+        diagnosisDate: "2010-05-15T00:00:00.000Z",
         notes: "Type 2 diabetes, currently managed with medication.",
       },
       {
         condition: "Hypertension",
-        diagnosisDate: "2012-07-20",
+        diagnosisDate: "2012-07-20T00:00:00.000Z",
         notes: "Regular blood pressure monitoring required.",
       },
     ],
@@ -28,18 +28,18 @@ const initialData = [
         name: "Metformin",
         dosage: "500mg",
         frequency: "Twice a day",
-        startDate: "2010-06-01",
+        startDate: "2010-06-01T00:00:00.000Z",
       },
       {
         name: "Lisinopril",
         dosage: "20mg",
         frequency: "Once a day",
-        startDate: "2012-08-01",
+        startDate: "2012-08-01T00:00:00.000Z",
       },
     ],
     appointments: [
       {
-        date: "2024-07-01",
+        date: "2024-07-01T10:00:00.000Z",
         time: "10:00",
         doctor: "Dr. Smith",
         reason: "Routine check-up",
@@ -51,13 +51,13 @@ const initialData = [
         medication: "Metformin",
         dosage: "500mg",
         frequency: "Twice a day",
-        datePrescribed: "2024-06-01",
+        datePrescribed: "2024-06-01T00:00:00.000Z",
         prescribingDoctor: "Dr. Smith",
       },
     ],
     vitals: [
       {
-        date: "2024-07-10",
+        date: "2024-07-10T00:00:00.000Z",
         bloodPressure: "120/80",
         heartRate: "72",
         temperature: "98.6",
@@ -68,7 +68,7 @@ const initialData = [
       {
         provider: "Health Insurance Co.",
         policyNumber: "123456789",
-        validUntil: "2025-01-01",
+        validUntil: "2025-01-01T00:00:00.000Z",
       },
     ],
     emergencyContacts: [
@@ -83,7 +83,7 @@ const initialData = [
     personalInfo: {
       firstName: "Alice",
       lastName: "Smith",
-      dob: "1985-08-15",
+      dob: "1985-08-15T00:00:00.000Z",
       gender: "female",
       contactInfo: {
         email: "alice.smith@example.com",
@@ -94,7 +94,7 @@ const initialData = [
     medicalHistory: [
       {
         condition: "Asthma",
-        diagnosisDate: "2000-10-20",
+        diagnosisDate: "2000-10-20T00:00:00.000Z",
         notes: "Exercise-induced asthma, using inhaler as needed.",
       },
     ],
@@ -103,12 +103,12 @@ const initialData = [
         name: "Albuterol",
         dosage: "90mcg",
         frequency: "As needed",
-        startDate: "2000-10-21",
+        startDate: "2000-10-21T00:00:00.000Z",
       },
     ],
     appointments: [
       {
-        date: "2024-08-15",
+        date: "2024-08-15T11:30:00.000Z",
         time: "11:30",
         doctor: "Dr. Johnson",
         reason: "Follow-up for asthma management",
@@ -120,13 +120,13 @@ const initialData = [
         medication: "Albuterol",
         dosage: "90mcg",
         frequency: "As needed",
-        datePrescribed: "2024-08-01",
+        datePrescribed: "2024-08-01T00:00:00.000Z",
         prescribingDoctor: "Dr. Johnson",
       },
     ],
     vitals: [
       {
-        date: "2024-08-10",
+        date: "2024-08-10T00:00:00.000Z",
         bloodPressure: "110/70",
         heartRate: "65",
         temperature: "98.2",
@@ -137,7 +137,7 @@ const initialData = [
       {
         provider: "Medical Insurance Inc.",
         policyNumber: "987654321",
-        validUntil: "2024-12-31",
+        validUntil: "2024-12-31T00:00:00.000Z",
       },
     ],
     emergencyContacts: [
@@ -152,7 +152,7 @@ const initialData = [
     personalInfo: {
       firstName: "Emily",
       lastName: "Johnson",
-      dob: "1975-03-20",
+      dob: "1975-03-20T00:00:00.000Z",
       gender: "female",
       contactInfo: {
         email: "emily.johnson@example.com",
@@ -163,7 +163,7 @@ const initialData = [
     medicalHistory: [
       {
         condition: "High Cholesterol",
-        diagnosisDate: "2005-12-15",
+        diagnosisDate: "2005-12-15T00:00:00.000Z",
         notes: "High LDL levels, managing with diet and medication.",
       },
     ],
@@ -172,12 +172,12 @@ const initialData = [
         name: "Atorvastatin",
         dosage: "20mg",
         frequency: "Once a day",
-        startDate: "2006-01-01",
+        startDate: "2006-01-01T00:00:00.000Z",
       },
     ],
     appointments: [
       {
-        date: "2024-09-01",
+        date: "2024-09-01T09:00:00.000Z",
         time: "09:00",
         doctor: "Dr. Brown",
         reason: "Annual check-up",
@@ -189,13 +189,13 @@ const initialData = [
         medication: "Atorvastatin",
         dosage: "20mg",
         frequency: "Once a day",
-        datePrescribed: "2024-08-15",
+        datePrescribed: "2024-08-15T00:00:00.000Z",
         prescribingDoctor: "Dr. Brown",
       },
     ],
     vitals: [
       {
-        date: "2024-08-25",
+        date: "2024-08-25T00:00:00.000Z",
         bloodPressure: "130/85",
         heartRate: "70",
         temperature: "98.0",
@@ -206,7 +206,7 @@ const initialData = [
       {
         provider: "Healthcare Insurance Co.",
         policyNumber: "246813579",
-        validUntil: "2024-11-30",
+        validUntil: "2024-11-30T00:00:00.000Z",
       },
     ],
     emergencyContacts: [
@@ -221,7 +221,7 @@ const initialData = [
     personalInfo: {
       firstName: "Michael",
       lastName: "Brown",
-      dob: "1982-12-10",
+      dob: "1982-12-10T00:00:00.000Z",
       gender: "male",
       contactInfo: {
         email: "michael.brown@example.com",
@@ -232,7 +232,7 @@ const initialData = [
     medicalHistory: [
       {
         condition: "Allergies",
-        diagnosisDate: "1990-05-01",
+        diagnosisDate: "1990-05-01T00:00:00.000Z",
         notes: "Seasonal allergies, takes antihistamines during spring.",
       },
     ],
@@ -241,12 +241,12 @@ const initialData = [
         name: "Cetirizine",
         dosage: "10mg",
         frequency: "Once a day",
-        startDate: "2000-06-01",
+        startDate: "2000-06-01T00:00:00.000Z",
       },
     ],
     appointments: [
       {
-        date: "2024-10-01",
+        date: "2024-10-01T14:00:00.000Z",
         time: "14:00",
         doctor: "Dr. White",
         reason: "Allergy evaluation",
@@ -258,13 +258,13 @@ const initialData = [
         medication: "Cetirizine",
         dosage: "10mg",
         frequency: "Once a day",
-        datePrescribed: "2024-09-15",
+        datePrescribed: "2024-09-15T00:00:00.000Z",
         prescribingDoctor: "Dr. White",
       },
     ],
     vitals: [
       {
-        date: "2024-09-20",
+        date: "2024-09-20T00:00:00.000Z",
         bloodPressure: "115/75",
         heartRate: "68",
         temperature: "98.4",
@@ -275,7 +275,7 @@ const initialData = [
       {
         provider: "Insurance Services Ltd.",
         policyNumber: "135792468",
-        validUntil: "2025-03-31",
+        validUntil: "2025-03-31T00:00:00.000Z",
       },
     ],
     emergencyContacts: [
@@ -290,7 +290,7 @@ const initialData = [
     personalInfo: {
       firstName: "David",
       lastName: "Lee",
-      dob: "1995-06-25",
+      dob: "1995-06-25T00:00:00.000Z",
       gender: "male",
       contactInfo: {
         email: "david.lee@example.com",
@@ -301,7 +301,7 @@ const initialData = [
     medicalHistory: [
       {
         condition: "Migraines",
-        diagnosisDate: "2010-08-15",
+        diagnosisDate: "2010-08-15T00:00:00.000Z",
         notes: "Chronic migraines, managing with prescription medication.",
       },
     ],
@@ -310,12 +310,12 @@ const initialData = [
         name: "Sumatriptan",
         dosage: "100mg",
         frequency: "As needed",
-        startDate: "2010-09-01",
+        startDate: "2010-09-01T00:00:00.000Z",
       },
     ],
     appointments: [
       {
-        date: "2024-11-01",
+        date: "2024-11-01T15:30:00.000Z",
         time: "15:30",
         doctor: "Dr. Taylor",
         reason: "Follow-up for migraine treatment",
@@ -327,13 +327,13 @@ const initialData = [
         medication: "Sumatriptan",
         dosage: "100mg",
         frequency: "As needed",
-        datePrescribed: "2024-10-15",
+        datePrescribed: "2024-10-15T00:00:00.000Z",
         prescribingDoctor: "Dr. Taylor",
       },
     ],
     vitals: [
       {
-        date: "2024-10-25",
+        date: "2024-10-25T00:00:00.000Z",
         bloodPressure: "125/80",
         heartRate: "70",
         temperature: "98.2",
@@ -344,7 +344,7 @@ const initialData = [
       {
         provider: "Health Insurance Services",
         policyNumber: "9876543210",
-        validUntil: "2025-06-30",
+        validUntil: "2025-06-30T00:00:00.000Z",
       },
     ],
     emergencyContacts: [
