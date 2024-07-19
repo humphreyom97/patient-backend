@@ -11,7 +11,7 @@ const port = process.env.PORT || "3000";
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 
-  if (process.env.KEEP_SERVER_ALIVE) {
+  if (process.env.KEEP_SERVER_ALIVE === "true") {
     setupCronJob();
   }
 });
