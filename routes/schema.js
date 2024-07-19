@@ -26,13 +26,12 @@ const getSchemaMetadata = (schemaPaths) => {
 };
 
 // Retrieve schema metadata for patients
-router.get("/schema/patients", async (req, res) => {
+router.get("/schemas/patients", async (req, res) => {
   try {
     const schemaPaths = Patient.schema.paths;
     const validationMetadata = getSchemaMetadata(schemaPaths);
     res.json(validationMetadata);
   } catch (err) {
-    console.error("Error retrieving schema metadata:", err);
     res.status(500).json({ error: "Server error" });
   }
 });

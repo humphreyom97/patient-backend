@@ -1,4 +1,3 @@
-// __tests__/patient.test.js
 import request from "supertest";
 import app from "../app.js";
 import Patient from "../models/patient.js";

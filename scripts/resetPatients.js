@@ -9,7 +9,6 @@ const apiUrl = process.env.API_BASE_URL;
 async function resetPatients() {
   try {
     const response = await axios.post(`${apiUrl}/patients/resetPatients`);
-    console.log("Response:", response.data);
   } catch (error) {
     console.error("Error resetting patients:", error.message);
   }

@@ -1,4 +1,4 @@
-import { connectDb } from "./models/index.js";
+import { connectDb } from "./config/db.js";
 import { setupCronJob } from "./utils/pingServer.js";
 import app from "./app.js";
 

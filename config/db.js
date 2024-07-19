@@ -1,12 +1,10 @@
-// Import necessary modules using ES module syntax
 import mongoose from "mongoose";
 import dotenv from "dotenv";
-import Patient from "./patient.js";
+import Patient from "../models/patient.js";
 
 // Load environment variables from .env file
 dotenv.config();
 
-// Define the connectDb function
 const connectDb = async () => {
   try {
     await mongoose.connect(process.env.MONGO_URI, {
@@ -15,7 +13,8 @@ const connectDb = async () => {
     console.log("MongoDB connected successfully");
   } catch (err) {
     console.error("Error connecting to MongoDB:", err.message);
-    process.exit(1); // Exit process with failure
+    // Exit process with failure
+    process.exit(1);
   }
 };
 

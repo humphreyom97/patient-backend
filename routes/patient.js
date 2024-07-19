@@ -38,7 +38,7 @@ router.post("/patients", async (req, res) => {
   }
 });
 
-// delete the patient from the database
+// delete the patient by ID
 router.delete("/patients/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -58,7 +58,7 @@ router.delete("/patients/:id", async (req, res) => {
   }
 });
 
-// Update a patient record
+// update a patient by ID
 router.put("/patients/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -76,7 +76,7 @@ router.put("/patients/:id", async (req, res) => {
   }
 });
 
-// Partial update of a patient record
+// partial update of a patient by ID
 router.patch("/patients/:id", async (req, res) => {
   try {
     const { id } = req.params;
@@ -93,7 +93,7 @@ router.patch("/patients/:id", async (req, res) => {
   }
 });
 
-// Reset patient database
+// reset patient database with original data
 router.post("/patients/resetPatients", async (req, res) => {
   try {
     // Clear the existing database
